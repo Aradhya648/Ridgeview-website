@@ -7,7 +7,8 @@ import { siteConfig } from "@/data/content";
 export default function Hero() {
   return (
     <section className="relative min-h-[100svh] flex items-center justify-center px-5 sm:px-6 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(30,58,95,0.04),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(30,58,95,0.05),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(226,232,240,0.35)_1px,transparent_1px),linear-gradient(to_bottom,rgba(226,232,240,0.35)_1px,transparent_1px)] bg-[size:80px_80px] [mask-image:radial-gradient(ellipse_at_center,white_30%,transparent_75%)]" />
 
       <div className="relative mx-auto max-w-4xl text-center pt-16">
         <motion.p

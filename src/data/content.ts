@@ -19,6 +19,7 @@ export interface Article {
   excerpt: string;
   readTime: string;
   slug: string;
+  featured?: boolean;
 }
 
 export interface Service {
@@ -157,6 +158,16 @@ export const analysts: TeamMember[] = [
 // INSIGHTS — replace with real articles
 // ────────────────────────────────────────
 export const articles: Article[] = [
+  {
+    date: "June 2026",
+    category: "Policy Research",
+    title: "India's Fiscal Federalism Under Strain",
+    excerpt:
+      "Centre-State transfers, devolution gaps, and the road to the 16th Finance Commission. A systematic analysis of GST-induced fiscal erosion, formula limitations, and six actionable reform recommendations.",
+    readTime: "25 min read",
+    slug: "fiscal-federalism",
+    featured: true,
+  },
   {
     date: "June 2026",
     category: "Market Analysis",

@@ -24,17 +24,18 @@ export default function Services() {
           </p>
         </FadeIn>
 
-        <div className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 gap-x-8 sm:gap-x-12 gap-y-10 sm:gap-y-14">
+        <div className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
           {services.map((service, i) => (
             <FadeIn key={service.number} delay={0.1 + i * 0.08}>
-              <div className="group">
-                <p className="text-xs font-mono text-muted mb-2 sm:mb-3">
+              <div className="group p-6 sm:p-7 border border-border rounded-xl hover:border-accent/30 hover:shadow-sm bg-white transition-all duration-200">
+                <p className="text-xs font-mono text-accent/60 mb-3">
                   {service.number}
                 </p>
-                <h3 className="text-lg sm:text-xl font-semibold tracking-tight text-foreground group-hover:text-accent transition-colors duration-200">
+                <h3 className="text-base sm:text-lg font-semibold tracking-tight text-foreground group-hover:text-accent transition-colors duration-200 mb-3">
                   {service.title}
                 </h3>
-                <p className="mt-2 sm:mt-3 text-sm sm:text-base text-muted leading-relaxed">
+                <div className="w-8 h-px bg-accent/20 mb-4 group-hover:w-14 transition-all duration-300" />
+                <p className="text-sm sm:text-base text-muted leading-relaxed">
                   {service.description}
                 </p>
               </div>

@@ -30,11 +30,16 @@ export default function InsightsPage() {
         <div className="mt-12 sm:mt-16 divide-y divide-border">
           {articles.map((article, i) => (
             <FadeIn key={article.slug} delay={0.1 + i * 0.06}>
-              <article className="group py-8 sm:py-10 first:pt-0 cursor-pointer">
+              <Link href={`/insights/${article.slug}`} className="block group py-8 sm:py-10 first:pt-0">
                 <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                   <span className="text-xs font-medium uppercase tracking-wider text-accent">
                     {article.category}
                   </span>
+                  {article.featured && (
+                    <span className="text-xs font-medium px-2 py-0.5 bg-accent/8 text-accent rounded-full border border-accent/15">
+                      Featured
+                    </span>
+                  )}
                   <span className="text-xs text-muted">{article.date}</span>
                 </div>
                 <h2 className="text-xl sm:text-2xl font-semibold tracking-tight text-foreground group-hover:text-accent transition-colors duration-200 leading-snug">
@@ -43,10 +48,11 @@ export default function InsightsPage() {
                 <p className="mt-2 sm:mt-3 text-sm sm:text-base text-muted leading-relaxed max-w-2xl">
                   {article.excerpt}
                 </p>
-                <p className="mt-3 sm:mt-4 text-xs sm:text-sm text-muted">
-                  {article.readTime}
-                </p>
-              </article>
+                <div className="mt-3 sm:mt-4 flex items-center gap-4">
+                  <span className="text-xs sm:text-sm text-muted">{article.readTime}</span>
+                  <span className="text-xs sm:text-sm text-accent font-medium group-hover:underline">Read &rarr;</span>
+                </div>
+              </Link>
             </FadeIn>
           ))}
         </div>
