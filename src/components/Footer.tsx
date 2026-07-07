@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { siteConfig } from "@/data/content";
+import RidgeviewLogo from "./RidgeviewLogo";
 
 export default function Footer() {
   return (
@@ -7,9 +8,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-5 sm:px-6 py-12 sm:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10">
           <div className="sm:col-span-2">
-            <p className="text-lg font-semibold tracking-tight text-foreground">
-              {siteConfig.name}
-            </p>
+            <RidgeviewLogo className="h-10 w-auto mb-3" />
             <p className="mt-3 text-sm text-muted max-w-sm leading-relaxed">
               Student-led market intelligence and competitive research
               for B2B companies. Rigorous analysis, actionable insights.

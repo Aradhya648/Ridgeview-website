@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import RidgeviewLogo from "./RidgeviewLogo";
 
 const links = [
   { href: "/#about", label: "About" },
@@ -19,8 +20,8 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-border">
       <div className="mx-auto max-w-6xl px-6 flex items-center justify-between h-16">
-        <Link href="/" className="text-lg font-semibold tracking-tight text-foreground">
-          Ridgeview
+        <Link href="/" className="flex items-center" aria-label="Ridgeview Consulting">
+          <RidgeviewLogo className="h-9 w-auto" />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
