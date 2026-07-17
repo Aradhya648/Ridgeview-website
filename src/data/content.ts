@@ -121,6 +121,7 @@ export const associates: TeamMember[] = [
   {
     name: "Avin Makan",
     role: "Associate",
+    photo: "/team/avin-makan.jpeg",
   },
 ];
 
