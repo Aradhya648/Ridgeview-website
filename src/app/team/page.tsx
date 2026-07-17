@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 import { leadership, associates, siteConfig } from "@/data/content";
 import type { TeamMember } from "@/data/content";
@@ -8,14 +9,26 @@ function MemberCard({ member, index }: { member: TeamMember; index: number }) {
   return (
     <FadeIn delay={0.05 + index * 0.04}>
       <div className="group p-5 sm:p-6 border border-border rounded-xl hover:border-accent/30 transition-all duration-300">
-        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-accent/8 flex items-center justify-center mb-4 sm:mb-5">
-          <span className="text-xs sm:text-sm font-semibold text-accent">
-            {member.name
-              .split(" ")
-              .map((n) => n[0])
-              .join("")}
-          </span>
-        </div>
+        {member.photo ? (
+          <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden mb-4 sm:mb-5 relative">
+            <Image
+              src={member.photo}
+              alt={member.name}
+              fill
+              className="object-cover"
+              sizes="64px"
+            />
+          </div>
+        ) : (
+          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-accent/8 flex items-center justify-center mb-4 sm:mb-5">
+            <span className="text-xs sm:text-sm font-semibold text-accent">
+              {member.name
+                .split(" ")
+                .map((n) => n[0])
+                .join("")}
+            </span>
+          </div>
+        )}
         <h3 className="text-base sm:text-lg font-semibold tracking-tight text-foreground">
           {member.name}
         </h3>

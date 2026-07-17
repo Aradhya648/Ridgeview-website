@@ -3,6 +3,7 @@ export interface TeamMember {
   role: string;
   school?: string;
   bio?: string;
+  photo?: string;
 }
 
 export interface CaseStudy {
@@ -92,10 +93,12 @@ export const leadership: TeamMember[] = [
   {
     name: "Vasu Garg",
     role: "Director",
+    photo: "/team/vasu-garg.jpeg",
   },
   {
     name: "Ansh Gupta",
     role: "Vice President",
+    photo: "/team/ansh-gupta.jpeg",
   },
 ];
 
@@ -103,14 +106,17 @@ export const associates: TeamMember[] = [
   {
     name: "Ayushman Srivastava",
     role: "Associate",
+    photo: "/team/ayushman-srivastava.jpeg",
   },
   {
     name: "Aradhya Mishra",
     role: "Associate",
+    photo: "/team/aradhya-mishra.jpeg",
   },
   {
     name: "Rohan GM",
     role: "Associate",
+    photo: "/team/rohan-gm.jpeg",
   },
   {
     name: "Avin Makan",
