@@ -1,8 +1,8 @@
 export interface TeamMember {
   name: string;
   role: string;
-  school: string;
-  bio: string;
+  school?: string;
+  bio?: string;
 }
 
 export interface CaseStudy {
@@ -90,67 +90,31 @@ export const caseStudies: CaseStudy[] = [
 // ────────────────────────────────────────
 export const leadership: TeamMember[] = [
   {
-    name: "Alex Chen",
-    role: "President",
-    school: "Stanford University",
-    bio: "Economics major with a focus on market structure and competitive dynamics. Previously interned at a strategy consulting firm.",
+    name: "Vasu Garg",
+    role: "Director",
   },
   {
-    name: "Sarah Patel",
-    role: "VP of Research",
-    school: "UC Berkeley",
-    bio: "Data science background with deep expertise in quantitative market analysis and research methodology.",
-  },
-  {
-    name: "James Okafor",
-    role: "VP of Client Relations",
-    school: "University of Michigan",
-    bio: "Business administration with a specialization in B2B sales and partnerships. Manages all client engagements.",
-  },
-  {
-    name: "Maria Gonzalez",
-    role: "VP of Operations",
-    school: "Georgia Tech",
-    bio: "Industrial engineering student who brings process rigor and project management expertise to every engagement.",
+    name: "Ansh Gupta",
+    role: "Vice President",
   },
 ];
 
-export const analysts: TeamMember[] = [
+export const associates: TeamMember[] = [
   {
-    name: "David Kim",
-    role: "Senior Analyst",
-    school: "MIT",
-    bio: "Computer science and economics double major. Specializes in technology market research.",
+    name: "Ayushman Srivastava",
+    role: "Associate",
   },
   {
-    name: "Priya Sharma",
-    role: "Senior Analyst",
-    school: "Columbia University",
-    bio: "Finance major focused on M&A due diligence and valuation analysis.",
+    name: "Aradhya Mishra",
+    role: "Associate",
   },
   {
-    name: "Ryan Thompson",
-    role: "Analyst",
-    school: "University of Virginia",
-    bio: "International relations background bringing a global perspective to market entry research.",
+    name: "Rohan GM",
+    role: "Associate",
   },
   {
-    name: "Emily Zhang",
-    role: "Analyst",
-    school: "NYU Stern",
-    bio: "Marketing and data analytics. Focused on competitive positioning and brand perception studies.",
-  },
-  {
-    name: "Marcus Johnson",
-    role: "Analyst",
-    school: "Duke University",
-    bio: "Public policy and economics. Brings regulatory and policy analysis capabilities to research projects.",
-  },
-  {
-    name: "Aisha Rahman",
-    role: "Analyst",
-    school: "University of Chicago",
-    bio: "Economics with a focus on industrial organization. Specializes in competitive dynamics.",
+    name: "Avin Makan",
+    role: "Associate",
   },
 ];
 

@@ -1,7 +1,7 @@
 "use client";
 
 import FadeIn from "@/components/FadeIn";
-import { leadership, analysts, siteConfig } from "@/data/content";
+import { leadership, associates, siteConfig } from "@/data/content";
 import type { TeamMember } from "@/data/content";
 
 function MemberCard({ member, index }: { member: TeamMember; index: number }) {
@@ -20,10 +20,14 @@ function MemberCard({ member, index }: { member: TeamMember; index: number }) {
           {member.name}
         </h3>
         <p className="text-sm font-medium text-accent mt-0.5">{member.role}</p>
-        <p className="text-xs text-muted mt-1">{member.school}</p>
-        <p className="text-xs sm:text-sm text-muted leading-relaxed mt-3 sm:mt-4">
-          {member.bio}
-        </p>
+        {member.school && (
+          <p className="text-xs text-muted mt-1">{member.school}</p>
+        )}
+        {member.bio && (
+          <p className="text-xs sm:text-sm text-muted leading-relaxed mt-3 sm:mt-4">
+            {member.bio}
+          </p>
+        )}
       </div>
     </FadeIn>
   );
@@ -57,7 +61,7 @@ export default function TeamPage() {
               Leadership
             </h2>
           </FadeIn>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {leadership.map((member, i) => (
               <MemberCard key={member.name} member={member} index={i} />
             ))}
@@ -67,11 +71,11 @@ export default function TeamPage() {
         <div className="mt-14 sm:mt-20">
           <FadeIn>
             <h2 className="text-xs font-medium uppercase tracking-widest text-muted mb-6 sm:mb-8">
-              Analysts
+              Associates
             </h2>
           </FadeIn>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {analysts.map((member, i) => (
+            {associates.map((member, i) => (
               <MemberCard key={member.name} member={member} index={i} />
             ))}
           </div>
