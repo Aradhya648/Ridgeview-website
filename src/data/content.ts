@@ -183,7 +183,7 @@ export const articles: Article[] = [
 export const siteConfig = {
   name: "Ridgeview Consulting",
   tagline: "Student-Led Market Intelligence",
-  email: "hello@ridgeviewconsulting.in",
+  email: "contact@ridgeviewconsulting.in",
   domain: "ridgeviewconsulting.in",
   description:
     "Ridgeview Consulting delivers competitive intelligence and market research for B2B companies. 50+ student analysts across multiple colleges.",
