@@ -92,12 +92,12 @@ export const caseStudies: CaseStudy[] = [
 export const leadership: TeamMember[] = [
   {
     name: "Vasu Garg",
-    role: "Director",
+    role: "Vice President",
     photo: "/team/vasu-garg.jpeg",
   },
   {
     name: "Ansh Gupta",
-    role: "Vice President",
+    role: "President",
     photo: "/team/ansh-gupta.jpeg",
   },
 ];
